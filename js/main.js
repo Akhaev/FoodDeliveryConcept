@@ -1,148 +1,85 @@
 
-//let a = 2
-
-//console.log(a)
-
-//let b
-
-//console.log(b)
-
-// let today = new Date()
-
-// console.log(today)
-// console.log("Дата задаётся типом Date")
-
-// console.log(Math.PI)
-// console.log("Число Пи задаётся типом Math.PI")
-
-// const c = 17
-
-// console.log("Uncaught TypeError: Assignment to constant variable. При попытке поменять значение const")
-
-// let name = prompt("Имя?")    
-// let address = prompt("Адрес?")
-// let phone = prompt("Номер телефона?")
-
-// console.log(`Студент: ${name}, Адрес: ${address}, Номер телефона: ${phone}`)
-
-// let ruble = 1
-// let dollar = ruble * 92.53
-
-// iHave = prompt("Ваш баланс? (В рублях)")
-// console.log("Вы можете приобрести: " + iHave / dollar + " долларов")
-
-// const number = 11
-
-// if(number < 10){
-//     console.log('Константа меньше 10')
-// }else {
-//     console.log('Константа не меньше 10')
-// }
-
-// if(4 < 2){
-//     console.log('First codeline')
-// }else if(5 < 3){
-//     console.log('Second codeline')
-// }else{
-//     console.log('Last codeline')
-// }
-
-// let loginBD = 'abc'
-// let passwordBD = 123
-
-// console.log('login - abc ; password - 123')
-
-// let login = prompt('Make your login')
-// let password = prompt('Make your password')
-
-// if(loginBD == login){
-//     if(passwordBD == password){
-//         console.log('Welcome')
+// function fn(x) {
+//     if(x < 10){
+//         console.log('константа меньше 10')
 //     }else{
-//         console.log('Password Error')
-//     } 
-// }else{
-//     console.log('Login Error')
+//         console.log('константа не меньше 10')
+//     }
 // }
 
-// let key = 'true'
+// fn(11)
 
-// switch (key) {
-//     case 'false':
-//         console.log('false')
-//         break;
-//     case 'true':
-//         console.log('true')
-//         break;
-
-//     default:
-//         console.log('undefined')
-//         break;
+// let HelloWrld = function(){
+//     alert('Привет, Мир')
 // }
 
-// let a = 3 < 2 ? 'yes' : 'no'
+// HelloWrld()
 
-// console.log(a)
-// console.log('3 Задание ╥')
+// let js = () => console.log('JavaScript')
 
-// let x = 10
-// let y = 7
+// js()
 
-// if(x > y){
-//     console.log('x больше, чем y')
-// }else{
-//     console.log('x не больше, чем y')
+// const text = 'lorem text'
+// const lorem = 'lorem'
+
+// function txt(txxt) {
+//     if(text.includes(lorem)){
+//         console.log('У вас ошибка в тексте')
+//     }else{
+//         console.log('Содержимое переменной: ' + txxt)
+//     }
 // }
 
-// let num = prompt('Введите число:')
+// txt(text)
 
-// if(num%2===0){
-//     console.log(`Число ${num} чётное`)
-// }else{
-//     console.log(`Число ${num} не чётное`)
-// }
+let name = 'Albert' // string
 
-// let num1 = prompt('Введите первое число')
-// let num2 = prompt('Введите второе число')
-// let num3 = prompt('Введите третье число')
+const age = 18 // number
 
-// if(num1 > num2 && num1 > num3){
-//     console.log(`${num1} наибольшее число`)
-// }else if(num2 > num1 && num2 > num3){
-//     console.log(`${num2} наибольшее число`)
-// }else if(num3 > num1 && num3 > num2){
-//     console.log(`${num3} наибольшее число`)
-// }
+if(age < 15){
+    console.log('доступ запрещен')
+}else{
+    console.log(`Привет ${name}`)
+}
 
-function fn(x) {
-    if(x < 10){
-        console.log('константа меньше 10')
-    }else{
-        console.log('константа не меньше 10')
+function viewMoney(){
+    console.log('Вот вам 10$')
+}
+
+viewMoney()
+
+function getMoney(cash){
+    return (`Вот вам ${cash}$`)
+}
+
+function squareNumber(x){
+    console.log(x * x)
+}
+
+squareNumber(9)
+
+function maxNumber(){
+    console.log(Math.max.apply(null, arguments))
+}
+
+maxNumber(2, 12, 10, 100)
+
+function discriminant(a, b, c) {
+    console.log((b*b)-4*a*c)    
+}
+
+discriminant(2, 5, 3)
+
+function math(a, b) {
+    if(a % 2 == 0 && b % 2 == 0) {
+        console.log(a * b)
+    }else if(a % 2 > 0 && b % 2 > 0) {
+        console.log(a + b)
+    }else if(a % 2 > 0 && b % 2 == 0) {
+        console.log(a)
+    }else {
+        console.log(b)
     }
 }
 
-fn(11)
-
-let HelloWrld = function(){
-    alert('Привет, Мир')
-}
-
-HelloWrld()
-
-let js = () => console.log('JavaScript')
-
-js()
-
-const text = 'lorem text'
-const lorem = 'lorem'
-
-function txt(txxt) {
-    if(text.includes(lorem)){
-        console.log('У вас ошибка в тексте')
-    }else{
-        console.log('Содержимое переменной: ' + txxt)
-    }
-}
-
-txt(text)
+math(2, 9)
