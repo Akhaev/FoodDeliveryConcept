@@ -1,84 +1,66 @@
 
-// let name = 'Albert' // string
+// let man = {
+//     name: 'Albert',
+//     surname: 'Akhaev',
+//     age: 18,
+//     tall: 187,
+//     login: 'userLogin',
+//     password: 'userPassword',
+//     balance: 1200000
+// }
 
-// const age = 18 // number
+// man.address = 'Argun'
 
-// if(age < 15){
-//     console.log('доступ запрещен')
+// console.dir(man)
+
+// let text = 'Password'
+
+// if(text == man.password){
+//     console.log(`Добро пожаловать, ${man.name} ${man.surname}, Ваш логин: ${man.login}`)
 // }else{
-//     console.log(`Привет ${name}`)
+//     console.log(`Указанный пароль: ${text} – не верен. Попробуйте еще раз.`)
 // }
 
-// function viewMoney(){
-//     console.log('Вот вам 10$')
+// let num = 0
+// while(num < 3){
+//     console.log(`4ucno: ${num}`)
+//     num++
 // }
 
-// viewMoney()
-
-// function getMoney(cash){
-//     return (`Вот вам ${cash}$`)
+// for(let i = 1; i <= 10; i++){
+//     console.log(i)
 // }
 
-// function squareNumber(x){
-//     console.log(x * x)
-// }
+let a = ['lorem', 123, true, 'ipsum']
 
-// squareNumber(9)
+console.log(a.length)
 
-// function maxNumber(){
-//     console.log(Math.max.apply(null, arguments))
-// }
+console.log(a[0])
+console.log(a[a.length - 1])
 
-// maxNumber(2, 12, 10, 100)
+let em = [undefined]
 
-// function discriminant(a, b, c) {
-//     console.log((b*b)-4*a*c)    
-// }
+em.unshift(123, 'text')
+em.push(true, 'end')
+console.log(em);
 
-// discriminant(2, 5, 3)
+em.unshift('1 element', '2 element', '3 element')
+console.log(em);
 
-// function math(a, b) {
-//     if(a % 2 == 0 && b % 2 == 0) {
-//         console.log(a * b)
-//     }else if(a % 2 > 0 && b % 2 > 0) {
-//         console.log(a + b)
-//     }else if(a % 2 > 0 && b % 2 == 0) {
-//         console.log(a)
-//     }else {
-//         console.log(b)
-//     }
-// }
+em.shift()
+em.pop()
+em.pop()
+console.log(em);
 
-// math(2, 9)
+let number = [1, 3, 5, 7, 9]
 
-let man = {
-    name: 'Albert',
-    surname: 'Akhaev',
-    age: 18,
-    tall: 187,
-    login: 'userLogin',
-    password: 'userPassword',
-    balance: 1200000
-}
+let newArr = number.map(element => {
+    return element + 1;
+}); 
+console.log(newArr)
 
-man.address = 'Argun'
+delete number[2]
+console.log(number);
 
-console.dir(man)
-
-let text = 'Password'
-
-if(text == man.password){
-    console.log(`Добро пожаловать, ${man.name} ${man.surname}, Ваш логин: ${man.login}`)
-}else{
-    console.log(`Указанный пароль: ${text} – не верен. Попробуйте еще раз.`)
-}
-
-let num = 0
-while(num < 3){
-    console.log(`4ucno: ${num}`)
-    num++
-}
-
-for(let i = 1; i <= 10; i++){
-    console.log(i)
-}
+number[2] = 'text'
+console.log(number);
